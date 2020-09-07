@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle</h1>
+<div class="container">
+    <div class="card">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <img  src="~/imagen/@item.imagen" style="height:250px; width:300px;">
+                </div>
+
+                <div class="col-md-6">
+                    <h1> @item.nombre</h1>
+                    <h2>Marca: @item.marca</h2>
+                    <h3>Precio: S/ @item.precio</h3>
+                    <button class="btn btn-success">COMPRAR</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
